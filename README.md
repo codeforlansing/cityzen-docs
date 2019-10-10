@@ -1,12 +1,7 @@
-# Code for Lansing Project Template
+# cityzen
 
-This project is intended to be used as a template for creating new Code for
-Lansing projects on GitHub.
-
-Click the "Use this template" button to start a new Code for Lansing project.
-
-Once you've started a new project, please review all of the files that are
-created and change them to fit the requirements of that particular project.
+A simple web-based service for managing volunteers and tasks in small
+organizations.
 
 ## Questions
 
@@ -26,7 +21,7 @@ You are welcome and encouraged to make changes to this website by submitting
 pull requests or forking our code to make your own community website!
 
 Before you get ahead of yourself, though, please read our
-[Contributing Guide](https://github.com/codeforlansing/project-template/blob/master/.github/CONTRIBUTING.md).
+[Contributing Guide](https://github.com/codeforlansing/cityzen/blob/master/.github/CONTRIBUTING.md).
 
 ## License
 
