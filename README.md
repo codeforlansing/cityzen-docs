@@ -6,6 +6,8 @@ Cityzen allows people to volunteer for both a specific project and a specific ta
 
 Volunteers then click on a project task and a window pops up that captures their email.  Cityzen itself operates both in the background as well as supplying a reporting component.  The group receives an email and schedules an appointment for the volunteer.  If it's a new volunteer and the group is using either HubSpot or MailChimp their contact information will be added.
 
+{% page-ref page="setup/setting-up-trello.md" %}
+
 
 
 
