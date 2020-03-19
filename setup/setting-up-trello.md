@@ -18,6 +18,8 @@ By grabbing the titles of the cards you can drag them around to change their ord
 
 If you're interested in video tutorials for advanced Trello topics you can find them [here](%20https://blog.trello.com/press-play-the-trello-tutorial-video-series-is-here)
 
+[Setting up Cityzen](https://github.com/codeforlansing/cityzen/blob/master/setting-up-cityzen.md)
+
 [  
   
 ](https://blog.trello.com/press-play-the-trello-tutorial-video-series-is-here
