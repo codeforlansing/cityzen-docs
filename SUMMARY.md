@@ -5,7 +5,8 @@
 ## Setup
 
 * [Setting up Trello](setup/setting-up-trello.md)
-* [Setting up Cityzen](setting-up-cityzen.md)
+* [Setting up Cityzen](setting-up-cityzen/README.md)
+  * [Developers](setting-up-cityzen/developers.md)
 
 ## Meta
 
