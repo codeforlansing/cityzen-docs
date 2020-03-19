@@ -16,7 +16,9 @@ Now we're ready to create 'cards' which in Trello which will represent your proj
 
 By grabbing the titles of the cards you can drag them around to change their order.  So if you have a new project and want it to be first on your web page drag it to first in Trello and it will be reflected on your website.
 
-If you're interested in video tutorials for advanced Trello topics you can find them [here](%20https://blog.trello.com/press-play-the-trello-tutorial-video-series-is-here)[  
+If you're interested in video tutorials for advanced Trello topics you can find them [here](%20https://blog.trello.com/press-play-the-trello-tutorial-video-series-is-here)
+
+[  
   
 ](https://blog.trello.com/press-play-the-trello-tutorial-video-series-is-here
 
