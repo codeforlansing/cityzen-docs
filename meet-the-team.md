@@ -80,13 +80,13 @@
 
 <tr>
 
-<td>**Core focus:  Project management</td>
+<td><b>Core focus</b>:  Project management</td>
 
 </tr>
 
 <tr>
 
-<td>####Brigade title:  Brigade Captain</td>
+<td><b>Brigade title:</b>  Brigade Captain</td>
 
 </tr>
 
@@ -138,19 +138,19 @@
 
 <tr>
 
-<td>**Core focus:** Project leader</td>
+<td><b>Core focus:</b> Project leader</td>
 
 </tr>
 
 <tr>
 
-<td>**Brigade title:** Hack night leader</td>
+<td><b>Brigade title:</b> Hack night leader</td>
 
 </tr>
 
 <tr>
 
-<td>**Slack handle:** Erik</td>
+<td><b>Slack handle:</b> Erik</td>
 
 </tr>
 
@@ -196,19 +196,19 @@
 
 <tr>
 
-<td>**Core focus:** Coder</td>
+<td><b>Core focus:</b> Coder</td>
 
 </tr>
 
 <tr>
 
-<td>**Brigade title:** Delivery lead</td>
+<td><b>Brigade title:</b> Delivery lead</td>
 
 </tr>
 
 <tr>
 
-<td>**Slack handle:** grenewode</td>
+<td><b>Slack handle:</b> grenewode</td>
 
 </tr>
 
@@ -254,19 +254,19 @@
 
 <tr>
 
-<td>**Core focus:** Documentation</td>
+<td><b>Core focus:</b> Documentation</td>
 
 </tr>
 
 <tr>
 
-<td>**Brigade title:** Senior Advisor</td>
+<td><b>Brigade title:</b> Senior Advisor</td>
 
 </tr>
 
 <tr>
 
-<td>**Slack handle:** rickmason</td>
+<td><b>Slack handle:</b> rickmason</td>
 
 </tr>
 
@@ -312,19 +312,19 @@
 
 <tr>
 
-<td>**Core focus:** Coder</td>
+<td><b>Core focus:</b> Coder</td>
 
 </tr>
 
 <tr>
 
-<td>**Brigade title:** Member</td>
+<td><b>Brigade title:</b> Member</td>
 
 </tr>
 
 <tr>
 
-<td>**Slack handle:** Medardo Rodriguez</td>
+<td><b>Slack handle:</b> Medardo Rodriguez</td>
 
 </tr>
 
