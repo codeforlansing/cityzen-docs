@@ -56,7 +56,9 @@ By grabbing the titles of the cards you can drag them around to change their ord
 
 </div>
 
-<div class="col-md-5 text-justify float-right">[Setting Up CityZen](setting-up-cityzen.md)</div>
+<p align="right>
+<a href="setting-up-cityzen.md">Setting Up CityZen</a>
+</p>
 
 </main>
 
