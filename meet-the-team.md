@@ -80,19 +80,19 @@
 
 <tr>
 
-<td>**Core focus:**  Project management</td>
+<td>**Core focus:  Project management</td>
 
 </tr>
 
 <tr>
 
-<td>####Brigade title:####  Brigade Captain</td>
+<td>####Brigade title:  Brigade Captain</td>
 
 </tr>
 
 <tr>
 
-<td>**Slack handle:**  Charla Burnett</td>
+<td><b>Slack handle:</b>  Charla Burnett</td>
 
 </tr>
 
