@@ -46,6 +46,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </div>
 
-<div class="col-md-5 text-justify float-right">[Link Trello](link-trello.md)</div>
+<p align="right">
+ <a href="link-trello.md">Link Trello</a>
+</p>
 
 </div>
