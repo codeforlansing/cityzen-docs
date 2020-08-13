@@ -71,7 +71,7 @@ The CityZen-Client project page on npm: [CityZen-Client](#)
 
 
 <p align="right">
- <a href="GitHub-install.md">GitHub Install</a>
+ <a href="github-install.md">GitHub Install</a>
 </p>
 
 </div>
