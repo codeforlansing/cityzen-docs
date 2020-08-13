@@ -42,6 +42,10 @@
 
 <div class="col-md-5 text-justify float-right">[NPM Install](npm-install.md)</div>
 
+<p align="right">
+<a href="npm-install.md">NPM Install</a>
+</p>
+
 </main>
 
 </div>
