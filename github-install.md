@@ -85,7 +85,9 @@ The second method for installing is to download the zip files for both [server](
 
 **TIP** If you need a local development web server CityZen recommends [http-server](https://www.npmjs.com/package/http-server)
 
-<div class="col-md-5 text-justify float-right">[Docker Install](docker-install.md)</div>
+<p align="right">
+ <a href="docker-install.md">Docker Install</a>
+</p>
 
 </div>
 
