@@ -56,7 +56,11 @@
 
 <tr rowspan="3">
 
-<td width="120" valign="top">![Charla Burnett](./Media/Charla.jpg)</td>
+<td width="120" valign="top">
+
+<img alt="Charla Burnett" src="./Media/Charla.jpg">
+
+</td>
 
 <td colspan="3">
 
