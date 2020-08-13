@@ -18,7 +18,7 @@
 ###### <span>Developers</span>[<span data-feather="plus-circle"></span>](#)
 
 *   [<span data-feather="npm install"></span>NPM Install](/npm-install.md)
-*   [<span data-feather="GitHub install"></span>GitHub Install](/gitHub-install.md)
+*   [<span data-feather="GitHub install"></span>GitHub Install](/github-install.md)
 *   [<span data-feather="Docker install"></span>Docker Install](/docker-install.md)
 *   [<span data-feather="Link Trello"></span>Link Trello](/link-trello.md)
 
