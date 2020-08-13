@@ -80,19 +80,19 @@
 
 <tr>
 
-<td>**Core focus:** Project management</td>
+<td>**Core focus:**  Project management</td>
 
 </tr>
 
 <tr>
 
-<td>**Brigade title:** Brigade Captain</td>
+<td>####Brigade title:####  Brigade Captain</td>
 
 </tr>
 
 <tr>
 
-<td>**Slack handle:** Charla Burnett</td>
+<td>**Slack handle:**  Charla Burnett</td>
 
 </tr>
 
@@ -116,7 +116,7 @@
 
 <td width="120" valign="top">
 
-<img alt="Erik Gillespie" src="(https://avatars0.githubusercontent.com/u/5572255?s=460&v=4">
+<img alt="Erik Gillespie" src="https://avatars0.githubusercontent.com/u/5572255?s=460&v=4">
 
 </td>
 
