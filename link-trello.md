@@ -46,6 +46,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 </div>
 
-<div class="col-md-5 text-justify float-right">[Meet the Team](meet-the-team.md)</div>
+<p align="right">
+ <a href="meet-the-team.md">Meet the Team</a>
+</p>
 
 </div>
