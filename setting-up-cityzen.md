@@ -1,4 +1,4 @@
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">[CityZen](/readme.md)</nav>
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow"><a href="/readme.md">CityZen</a></nav>
 
 <div class="container-fluid">
 
