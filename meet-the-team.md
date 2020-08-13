@@ -114,7 +114,11 @@
 
 <tr rowspan="3">
 
-<td width="120" valign="top">![Erik Gillespie](https://avatars0.githubusercontent.com/u/5572255?s=460&v=4)</td>
+<td width="120" valign="top">
+
+<img alt="Erik Gillespie" src="(https://avatars0.githubusercontent.com/u/5572255?s=460&v=4">
+
+</td>
 
 <td colspan="3">
 
@@ -168,7 +172,11 @@
 
 <tr rowspan="3">
 
-<td width="120" valign="top">![Robin Miller](https://avatars2.githubusercontent.com/u/3177877?s=460&v=4)</td>
+<td width="120" valign="top">
+
+<img alt="Robin Miller" src="https://avatars2.githubusercontent.com/u/3177877?s=460&v=4">
+
+</td>
 
 <td colspan="3">
 
@@ -222,7 +230,11 @@
 
 <tr rowspan="3">
 
-<td width="120" valign="top">![Rick Mason](https://avatars0.githubusercontent.com/u/3579139?s=400&u=32a77ff14487e1a96ec43e41af3aa82b58feab4e&v=4)</td>
+<td width="120" valign="top">
+
+<img alt="Rick Mason" src="https://avatars0.githubusercontent.com/u/3579139?s=400&u=32a77ff14487e1a96ec43e41af3aa82b58feab4e&v=4">
+
+</td>
 
 <td colspan="3">
 
@@ -276,7 +288,11 @@
 
 <tr rowspan="3">
 
-<td width="120" valign="top">![Medardo Rodriguez](https://avatars1.githubusercontent.com/u/12023460?s=460&v=4)</td>
+<td width="120" valign="top">
+
+<img alt="Medardo Rodriguez" src="https://avatars1.githubusercontent.com/u/12023460?s=460&v=4">
+
+</td>
 
 <td colspan="3">
 
