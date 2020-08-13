@@ -69,7 +69,10 @@ The CityZen-Client project page on npm: [CityZen-Client](#)
 
 **TIP** If you need a local development web server CityZen recommends [http-server](https://www.npmjs.com/package/http-server)
 
-<div class="col-md-5 text-justify float-right">[GitHub Install](gitHub-install.md)</div>
+
+<p align="right">
+ <a href="GitHub-install.md">GitHub Install</a>
+</p>
 
 </div>
 
