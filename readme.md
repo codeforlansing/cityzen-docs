@@ -50,7 +50,7 @@ Volunteers then click on a project task and a window pops up that captures their
 
 <div class="col-md-5 text-justify float-right">[Setting Up Trello](setting-up-trello.md)</div>
 <p align="center">
-![Volunteers Needed](https://raw.githubusercontent.com/codeforlansing/cityzen-docs/docs/Media/VolunteersNeeded.jpg)
+<img src = 'https://raw.githubusercontent.com/codeforlansing/cityzen-docs/docs/Media/VolunteersNeeded.jpg' alt="Vounteers Needed">
 </p>
 </main>
 
