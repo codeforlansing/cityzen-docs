@@ -125,40 +125,47 @@
         </div>
 
         <h4>Install using Docker</h4>
-        - A funtioning docker environment with docker compose is required
-        - install docker engine [Docker Engine documentation](https://docs.docker.com/engine/install/)
-        - install docker-compose [Docker Compose documentation](https://docs.docker.com/compose/install/)
-    #### On a linux workstation
-    - docker requires root privilegs either as the root user, using sudo, or the use of a [docker group](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
-    - in a terminal, navigate to the docker/development subdirectory of the local [cityzen-server git repository](https://github.com/codeforlansing/cityzen-server)
-        - example if repoistory cloned in ~/projects: `cd ~/projects/cityzen-server/docker/development`
-    - start the server using docker-compose (using sudo if needed)
-        - `docker-compose up`
-        - `sudo docker-compose up` 
-    - Currently tested on Ubuntu 20.04. Test your installation by running
-        - `docker run hello-world`
-    #### On a MacOSX development workstation
-    - docker requires elevated privileges and will request them when docker-desktop is first run.
-    - [Install Docker desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
-    - start the server using compose from the terminal
-        - change to repository docker/development dircetory. If the repository was cloned in your home directory
-            - `cd ~/cityzen-server/docker/development` 
-        - start the docker container using docker-compose
-            - `docker-compose up`
-    - Once the docker container has been started the first time, it can be managed from the docker-desktop dashboard
-    - Currently tested on MacOS Catalina 10.15.5.  Test your installation by running the hello-world container in the terminal
-        - `docker run hello-world`
-    #### On a Windows 10 (pro/enterprise/education) [development workstation](https://docs.docker.com/docker-for-windows/install/#system-requirements)
-    - User account control is required to install Docker-desktop
-    - Docker desktop requires Windows 10 Pro/enterprise (15063+)
-    - [enable hyper-v virtualization in windows](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)
-    - [Download and install docker-desktop](https://docs.docker.com/docker-for-windows/install/#install-docker-desktop-on-windows)
-    #### On a Windows 10 Home (19018+) using WSL 2 (Windows Subsystem for Linux)
-    - Administrator access to Powershell
-    - [Enabel WSL 2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-    -
-
-    </div>
+        <p>A funtioning docker environment with docker compose is required to run the server as a container:</p>
+        <ul>
+          <li>install docker engine <a href="https://docs.docker.com/engine/install/">Docker Engine documentation</a></li> 
+          <li>install docker-compose <a href="https://docs.docker.com/compose/install/">Docker-Compose documentation</a></li>
+        </ul>
+        <p>On a linux workstation:</p>
+          <ul>
+            <li>docker requires root privilegs either as the root user, using sudo, or the use of a <a href="https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user">docker group</a></li>
+            <li>Currently tested on Ubuntu 20.04. Test your installation by running (using sudo if needed) 
+              <em>docker run hello-world</em></li>
+            <li>in a terminal, navigate to the docker/development subdirectory of the local <a href="https://github.com/codeforlansing/cityzen-server">cityzen-server git repository</a><p>an example if repoistory cloned in ~/projects: 
+              <kbd>cd ~/projects/cityzen-server/docker/development<kbd></p></li>
+            <li>start the server using docker-compose (using sudo if needed) - either <kbd>docker-compose up</kbd>
+              or <kbd>sudo docker-compose up</kbd></li>
+          </ul>  
+        <p>On a MacOSX development workstation:</p>
+          <ul>
+            <li>docker requires elevated privileges and will request them when docker-desktop is first run.</li>
+            <li><a href="https://docs.docker.com/docker-for-mac/install/">Install Docker desktop for Mac</a></li>
+            <li>change to repository docker/development dircetory. If the repository was cloned in your home directory then
+              <kbd>cd ~/cityzen-server/docker/development</kbd></li>
+            <li>start the server using docker-compose from the terminal <kbd>docker-compose up</kbd></li>
+            <li>Once the docker container has been started the first time, it can be managed from the docker-desktop dashboard</li>
+            <li>Currently tested on MacOS Catalina 10.15.5.  Test your installation by running the hello-world container in the terminal 
+              <kbd>docker run hello-world</kbd></li>
+          </ul>
+        <p>On a Windows 10 (pro/enterprise/education) 
+          <a href="https://docs.docker.com/docker-for-windows/install/#system-requirements">development workstation</a>:</p> 
+          <ul>
+            <li>User account control is required to install Docker-desktop</li>
+            <li>Docker desktop requires Windows 10 Pro/enterprise (version 15063 or higher)</li>
+            <li><a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">
+              enable hyper-v virtualization in windows</a></li>
+            <li><a href="https://docs.docker.com/docker-for-windows/install/#install-docker-desktop-on-windows">
+              Download and install docker-desktop</a></li>
+          </ul>
+        <p>On a Windows 10 Home (version 19018 or higher) using WSL 2 (Windows Subsystem for Linux)</p> 
+          <ul>
+            <li>Requrires Administrator access to Powershell</li>
+            <li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Enable WSL 2</a></li>
+          </ul>
 
     <div class="col-md-5 text-justify float-right">
       <a class="nav-link" href="Link-Trello.html">Link Trello
@@ -167,11 +174,7 @@
         </svg>
       </a>
     </div>
-
-
-
-
-        </main>
-        </div>
-    </body>
-    </html>
+      </main>
+      </div>
+  </body>
+</html>
