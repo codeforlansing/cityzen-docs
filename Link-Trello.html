@@ -15,6 +15,9 @@
     <!-- Dashboard.css -->
     <link rel="stylesheet" href="./Media/dashboard.css">
 
+    
+
+
     <!-- Favicons -->
     <!-- Need to create Cityzen favicons - Olde English C perhaps? -->
 
@@ -25,7 +28,7 @@
 <link rel="icon" href="http://127.0.0.1:4000/Media/favicons/android-chrome-192x192.png" sizes="192x192" type="image/png">
 <link rel="icon" href="./Media/favicons/android-chrome-512x512.png" sizes="512x512" type="image/png">
 <link rel="icon" href="http://127.0.0.1:4000/Media/favicons/mstile-150x150.png">
-<link rel="manifest" href="./Media/favicons/site.webmanifest.json">
+<!-- <link rel="manifest" href="./Media/favicons/site.webmanifest.json"> -->
 
 <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
 
@@ -119,6 +122,8 @@
       </div>
     </nav> <!-- End left hand menu -->
 
+    <div>
+
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Linking to Trello</h1>
@@ -126,13 +131,64 @@
 
         <h4>Linking to Trello</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-          mollit anim id est laborum.
+          The CityZen-Server needs your contact information from Trello.  This information is three number-letter combinations that identify your account and list.  
+          These are stored in a file called .env that you place in the root of the CityZen-Server. Two of them you can gather and
+          the third we will provide.  We will generate the file, all you must do is download it and save to the CityZen-Server root
+          on your server.
         </p>
+        <p>
+          The first thing to retrieve from Trello is the Trello_API_Key.  Login into your Trello account.  Then go to <a href="https://trello.com/app-key" target="_blank">https://trello.com/app-key</a>
+          Copy it to the form field below.
+        </p>
+          The second thing to retrieve from Trello is the Trello_API_Token.  Go to <a href=" https://trello.com/app-key" target="_blank"> https://trello.com/app-key</a>  Click on the token link to generate a token and copy it to the form below.
+      </p>
+      <p>
+          The third thing to retrieve from Trello is the board list ID.  Look carefully at the URL string in your browser.  Make sure to 
+          select the personal board you want to use from the main menu.  The board list ID is the 8 digit number right after trello.com/b/.  Copy it also to the form.
 
+      </p>
+      <p>
+          Place both in the form below.  If your server for CityZen is not on the same domain as your webserver you can have
+          server permissions issues so we need to add one more line to the .env file.  If that is the case then tick the checkbox
+          on the form below.  We will look up the third piece of information which is called Trello_List_ID.  If you have more than
+          one list in Trello then the dropdown will help you select the correct one.
+
+          Trello_API_Token 
+
+
+        </p>
+        <div class="container">
+          <form @submit.prevent="submitForm" >
+            <div class="form-group">
+              <label for="Trello-API-Key">Trello_API_Key</label>
+              <input type="text" class="form-control"  name="trello-api-key" id="trello-api-key" size="30" placeholder="Enter Trello_API_Key">
+           </div>
+            <div class="form-group">
+              <label for="Trello-API-Token">Trello_API_Token</label>
+              <input type="text" class="form-control"  name="trello-api-token" id="trello-api-token" size="30" placeholder="Enter Trello_API_Key">
+            </div>
+            <div class="form-group">
+              <label for="Board-List-ID">Board List ID</label>
+              <input type="text" class="form-control" name="board-list-id" id="board-list-id" size="30" placeholder="Enter Board List ID">
+      </div>
+      <!--
+        <div class="form-group">
+          <label for="Trello-List-ID">Trello_List_ID</label>
+          <select name="trello-list-id" id="trello-list-id" disabled>
+              <option value="">----------------------------------</option>
+            </select>
+        </div>
+        -->
+        <div>
+          <input type="checkbox" id="corsYN"> Server and website are on different domains
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" >Download File</button>
+
+          </form>
+       
+        </div>
+        
     </div>
 
     <div class="col-md-5 text-justify float-right">
@@ -142,9 +198,31 @@
         </svg>
       </a>
     </div>
-
-
+    
     </main>
+
+    
+   
+  </div>
+  
     </div>
+
+  <script>
+
+    
+
+    function submitForm() {
+
+       // Add check to make sure there's a value for api_key, api_token and board_list_id
+    
+
+    };
+
+  </script> 
+    
+   
 </body>
+
+
 </html>
+
