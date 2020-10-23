@@ -124,16 +124,56 @@
           <h1 class="h2">Docker Install</h1>
         </div>
 
-        <h4>Install using Docker</h4>
+        <h4>Setup for developers - Running the cityzen-server locally</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex 
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-          mollit anim id est laborum.
+
+The cityzen-server can be started locally in two ways:<br/><br/>
+<b> Run as a docker container</b><br/>
+<ul>
+<li> A functioning Docker environment with docker compose is required</li>
+ <li> Install Docker engine <a href="https://docs.docker.com/engine/install/" target="_blank">Docker Engine documentation</a> </li>
+ <li> Install Docker-Compose <a href="https://docs.docker.com/compose/install/" target="_blank">Docker Compose documentation</a></li>
+  </ul>
+        </p>
+       
+<h4>On a Linux workstation</h4>
+<p>
+  <ul>
+    <li> Docker requires root privileges either as the root user, using sudo, or the use of a <a href="https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user" target="_blank">Docker group</a></li>
+<li> In a terminal, navigate to the docker/development subdirectory of the local <a href="https://github.com/codeforlansing/cityzen-server" target="_blank">cityzen-server git repository</a></li>
+<li> Example if repository cloned in ~/projects: <span class="bg-dark text-white w-50"><strong>cd ~/projects/cityzen-server/docker/development</strong></span></li>
+<li> Start the server using Docker-Compose (using sudo if needed)</li>
+<li> <p class="bg-dark text-white w-50"><strong>docker-compose up</strong></p></li>
+<li> <p class="bg-dark text-white w-50"><strong>sudo docker-compose up</strong></p> </li>
+<li> Currently tested on Ubuntu 20.04. Test your installation by running</li>
+<li> <p class="bg-dark text-white w-50"><strong>docker run hello-world</strong></p></li>
+  </ul>
+</p>
+<h4>On a MacOSX development workstation</h4>
+<p>
+  <ul>
+<li> Docker requires elevated privileges and will request them when docker-desktop is first run.</li>
+<li>  <a href="https://docs.docker.com/docker-for-mac/install/" target="_blank">Install Docker desktop for Mac</a></li>
+<li> Start the server using compose from the terminal</li>
+<li> Change to repository docker/development directory. If the repository was cloned in your home directory</li>
+<li> <p class="bg-dark text-white w-50"><strong>cd ~/cityzen-server/docker/development</strong></p></li>
+<li> Start the docker container using docker-compose</li>
+<li><p class="bg-dark text-white w-50"><strong>docker-compose up</strong></p></li>
+<li> Currently tested on MacOS Catalina 10.15.5.  Test your installation by running the hello-world container in the terminal</li>
+<li> <p class="bg-dark text-white w-50"><strong>docker run hello-world</strong></p></li>
+
+  </ul>
+</p>
+<h4>On a Windows 10 development workstation</h4>
+<p>
+
+<b>Run using npm/npx</b>
+
+To be continued...
+
         </p>
 
-    </div>
+</div>
 
     <div class="col-md-5 text-justify float-right">
       <a class="nav-link" href="Link-Trello.html">Link Trello
