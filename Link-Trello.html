@@ -32,6 +32,14 @@
 <link rel="icon" href="./media/favicons/favicon.ico">
 <meta name="msapplication-config" content="http://127.0.0.1:4000/Media/favicons/browserconfig.xml">
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-form@4.10.3/dist/vue-form.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js.map"></script>
+
+
+
 <meta name="theme-color" content="#563d7c">
 
   </head>
@@ -137,6 +145,7 @@
           The first thing to retrieve from Trello is the Trello_API_Key.  Login into your Trello account.  Then go to <a href="https://trello.com/app-key" target="_blank">https://trello.com/app-key</a>
           Copy it to the form field below.
         </p>
+      <p>
           The second thing to retrieve from Trello is the Trello_API_Token.  Go to <a href=" https://trello.com/app-key" target="_blank"> https://trello.com/app-key</a>  Click on the token link to generate a token and copy it to the form below.
       </p>
       <p>
@@ -154,35 +163,84 @@
 
 
         </p>
-        <div class="container">
-          <form @submit.prevent="submitForm" >
-            <div class="form-group">
-              <label for="Trello-API-Key">Trello_API_Key</label>
-              <input type="text" class="form-control"  name="trello-api-key" id="trello-api-key" size="30" placeholder="Enter Trello_API_Key">
-           </div>
-            <div class="form-group">
-              <label for="Trello-API-Token">Trello_API_Token</label>
-              <input type="text" class="form-control"  name="trello-api-token" id="trello-api-token" size="30" placeholder="Enter Trello_API_Key">
-            </div>
-            <div class="form-group">
-              <label for="Board-List-ID">Board List ID</label>
-              <input type="text" class="form-control" name="board-list-id" id="board-list-id" size="30" placeholder="Enter Board List ID">
+
+        <div id="app"  >
+          
+          <vue-form :state="formstate" @submit.prevent="onSubmit" >
+            
+           <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.apiKey)">
+             <table width="800">
+               <tr>
+            <td><label>Trello API Key <span style="color:red;">*</span> </label></td>
+                <td></td>
+            </tr> 
+            <tr>
+              <td>
+                <input type="text" name="apiKey" class="form-control"  required v-model.lazy="model.apiKey"/>
+              </td>
+              <td>
+                <field-messages name="apiKey" >
+                  <div> &nbsp;   <img src="./Media/checkmark-24.png" height="24" width="24"></div>
+                  <div slot="required">&nbsp; Required</div>
+                </field-messages>
+              </td>
+            </tr>
+            </table>
+            
+          </validate>
+        
+          <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.apiToken)">
+            <table width="800">
+              <tr>
+                <td><label>Trello API Token <span style="color:red;">*</span></label></td>
+                <td></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="text" name="apiToken" class="form-control" required v-model.lazy="model.apiToken" />
+            </td>
+            <td>
+              <field-messages name="apiToken">
+                <div> &nbsp; <img src="./Media/checkmark-24.png" height="24" width="24"></div>
+                <div slot="required">&nbsp; Required</div>
+              </field-messages>
+            </td>
+            </tr>
+          </table>
+         </validate>
+
+         <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.boardListID)">
+          <table width="800">
+            <tr>
+              <td><label>Board List ID <span style="color:red;">*</span> </label></td>
+              <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" name="boardListID" class="form-control" required v-model.lazy="model.boardListID"/>
+          </td>  
+          <td>
+            <field-messages name="boardListID">
+                <div> &nbsp; <img src="./Media/checkmark-24.png" height="24" width="24"></div>
+                <div slot="required">&nbsp; Required</div>
+            </field-messages>
+          </td>
+           </tr>
+          </table>
+        </validate>
+     
+        <div class="form-check">
+        
+          <input v-model="model.corsYN" type="checkbox" name="corsYN" />
+    
+      <label>Server and website are on different domains </label>
+          
       </div>
-      <!--
-        <div class="form-group">
-          <label for="Trello-List-ID">Trello_List_ID</label>
-          <select name="trello-list-id" id="trello-list-id" disabled>
-              <option value="">----------------------------------</option>
-            </select>
-        </div>
-        -->
-        <div>
-          <input type="checkbox" id="corsYN"> Server and website are on different domains
-        </div>
-        <br>
+      <br/><br/>
+
         <button type="submit" class="btn btn-primary" >Download File</button>
 
-          </form>
+          </vue-form>
        
         </div>
         
@@ -204,20 +262,88 @@
   
     </div>
 
-  <script>
+    <script type="module">
 
-    
+      var installDoc = ''
 
-    function submitForm() {
+       var vm = new Vue({
+        el: '#app',
+        mixins: [new VueForm({
+	        inputClasses: {
+  	        valid: 'form-control-success',
+            invalid: 'form-control-danger'
+            }
+        })],
+//        Vue.component('field-messages', { /* ... */ }),
+//        Vue.component('validate', { /* ... */ }),
+            data: {
+                formstate: {},
+            model: {
+            apiKey: '',
+            apiToken: '',
+            boardListID: '',
+            corsYN: ''
+        }
+        },
+        created: function() {
+        this.clonedModel = JSON.parse(JSON.stringify(this.model));
+        },
+        methods: {
+            fieldClassName: function(field) {
+          if (!field) {
+            return '';
+          }
+          if ((field.$touched || field.$submitted) && field.$valid) {
+            return 'has-success';
+          }
+          if ((field.$touched || field.$submitted) && field.$invalid) {
+            return 'has-danger';
+          }
+        },
+        onSubmit: function () {
+            console.log(this.formstate.$valid);
 
-       // Add check to make sure there's a value for api_key, api_token and board_list_id
-    
+            if (this.model.corsYN === true) {
+         //     console.log('is checked');
+              installDoc ='CORS_ALLOWED_ORIGINS=http://localhost:8080' + '\n' + 'TRELLO_API_KEY=' + this.model.apiKey + '\n' + 'TRELLO_API_TOKEN=' + this.model.apiToken + '\n' + 'TRELLO_LIST_ID=' + this.model.boardListID + '\n'
+          } else {
+         //   console.log('not checked');
+              installDoc = 'TRELLO_API_KEY=' + this.model.apiKey + '\n' + 'TRELLO_API_TOKEN=' + this.model.apiToken + '\n' + 'TRELLO_LIST_ID=' + this.model.boardListID + '\n'
+            }
+     
+          //  console.log(installDoc);
 
-    };
+       function SaveAsFile(t,f,m) {
+            try {
+                var b = new Blob([t],{type:m});
+                saveAs(b, f);
+            } catch (e) {
+                window.open("data:"+m+"," + encodeURIComponent(t), '_blank','');
+            }
+        }
 
-  </script> 
-    
-   
+        SaveAsFile(installDoc,"cityzen.env","text/plain;charset=utf-8");
+
+        },
+        onReset: function() {
+          this.model = JSON.parse(JSON.stringify(this.clonedModel));
+
+          console.log('reset');
+        }
+            // otherwise submit form
+        
+    }
+});
+   </script>
+
+   <style>
+    .required-field > label::after {
+    content: '*';
+    color: red;
+    margin-left: 0.25rem;
+    }
+   </style>
+
 </body>
 
 

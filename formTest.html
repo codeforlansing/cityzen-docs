@@ -1,0 +1,191 @@
+<!-- form test -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CityZen volunteer software documentation">
+    <meta name="author" content="Rick Mason">
+    <title>CityZen documentation</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Dashboard.css -->
+    <link rel="stylesheet" href="./Media/dashboard.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-form@4.10.3/dist/vue-form.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js.map"></script>
+
+    <!--  Failed experiment
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    -->
+    
+
+
+
+
+
+    <!-- Custom styles for this template -->
+    <!-- Dashboard.css -->
+    
+    <link rel="stylesheet" href="./Media/dashboard.css">
+
+   </head>
+
+   <body>
+
+    <div id="app" class="container py-5">
+        <vue-form :state="formstate" @submit.prevent="onSubmit">
+
+    <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.apiKey)">
+        <label>Trello API Key </label>
+        <span>
+        <input type="text" name="apiKey" class="form-control"  required v-model.lazy="model.apiKey" />
+   
+        <field-messages name="apiKey" >
+          <div> <img src="./Media/checkmark-24.png" height="24" width="24"> </div>
+         <!-- <div slot="required">Trello API Key is a required field</div> -->
+        </field-messages>
+      </span>
+      </validate>
+    
+      <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.apiToken)">
+            <label>Trello API Token</label>
+            <input type="text" name="apiToken" class="form-control" required v-model.lazy="model.apiToken" />
+   
+            <field-messages name="apiToken">
+                <div>Success!</div>
+                <div slot="required">Trello API Token is a required field</div>
+            </field-messages>
+      </validate>
+
+      <validate auto-label class="form-group required-field" :class="fieldClassName(formstate.boardListID)">
+            <label>Board List ID </label>
+            <input type="text" name="boardListID" class="form-control" required v-model.lazy="model.boardListID"/>
+   
+            <field-messages name="boardListID">
+                <div>Success!</div>
+                <div slot="required">Trello Board List ID is a required field</div>
+            </field-messages>
+      </validate>
+
+      <!-- Not showing up for some reason  
+
+      <field-messages name="corsYN">
+          <span>Server and website are on different domains </span>
+          <input type="checkbox" name="corsYN" class="form-control" v-model="model.corsYN" />
+      </field-messages>
+
+      -->
+      <div class="form-check">
+        
+          <input v-model="model.corsYN" type="checkbox" name="corsYN" />
+    
+      <label>Server and website are on different domains </label>
+          
+    </div>
+    <br/><br/>
+
+    <div class="py-2 text-center">
+        <button class="btn btn-primary" type="submit">Download File</button>
+    </div>
+
+  </vue-form>
+
+  
+  <pre>{{ formstate }}</pre>
+</div>
+
+   
+
+
+    <script type="module">
+
+      var installDoc = ''
+
+       var vm = new Vue({
+        el: '#app',
+        mixins: [new VueForm({
+	        inputClasses: {
+  	        valid: 'form-control-success',
+            invalid: 'form-control-danger'
+            }
+        })],
+//        Vue.component('field-messages', { /* ... */ }),
+//        Vue.component('validate', { /* ... */ }),
+            data: {
+                formstate: {},
+            model: {
+            apiKey: '',
+            apiToken: '',
+            boardListID: '',
+            corsYN: ''
+        }
+        },
+        created: function() {
+        this.clonedModel = JSON.parse(JSON.stringify(this.model));
+        },
+        methods: {
+            fieldClassName: function(field) {
+          if (!field) {
+            return '';
+          }
+          if ((field.$touched || field.$submitted) && field.$valid) {
+            return 'has-success';
+          }
+          if ((field.$touched || field.$submitted) && field.$invalid) {
+            return 'has-danger';
+          }
+        },
+        onSubmit: function () {
+            console.log(this.formstate.$valid);
+
+            if (this.model.corsYN === true) {
+         //     console.log('is checked');
+              installDoc ='CORS_ALLOWED_ORIGINS=http://localhost:8080' + '\n' + 'TRELLO_API_KEY=' + this.model.apiKey + '\n' + 'TRELLO_API_TOKEN=' + this.model.apiToken + '\n' + 'TRELLO_LIST_ID=' + this.model.boardListID + '\n'
+          } else {
+         //   console.log('not checked');
+              installDoc = 'TRELLO_API_KEY=' + this.model.apiKey + '\n' + 'TRELLO_API_TOKEN=' + this.model.apiToken + '\n' + 'TRELLO_LIST_ID=' + this.model.boardListID + '\n'
+            }
+     
+          //  console.log(installDoc);
+
+       function SaveAsFile(t,f,m) {
+            try {
+                var b = new Blob([t],{type:m});
+                saveAs(b, f);
+            } catch (e) {
+                window.open("data:"+m+"," + encodeURIComponent(t), '_blank','');
+            }
+        }
+
+        SaveAsFile(installDoc,"cityzen.env","text/plain;charset=utf-8");
+
+        },
+        onReset: function() {
+          this.model = JSON.parse(JSON.stringify(this.clonedModel));
+
+          console.log('reset');
+        }
+            // otherwise submit form
+        
+    }
+});
+   </script>
+
+   <style>
+    .required-field > label::after {
+    content: '*';
+    color: red;
+    margin-left: 0.25rem;
+    }
+   </style>
+
+</body>
+   </html>
