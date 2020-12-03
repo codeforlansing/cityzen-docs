@@ -123,15 +123,47 @@
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Setting up CityZen</h1>
+        <h1 class="h2">Setting up CityZen Server</h1>
       </div>
 
       <div class="col-md-9 text-justify align-top"> <!-- Main body of text -->
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id 
-          est laborum.
+        <p>
+          There are two ways to use the CityZen server:
+          <ol>
+            <li>
+              Get an account on our home server.  Contact us on our Slack.  You can sign up by going to http://LansingCodes.Slack.com .  
+              You will find us in the Code4Lansing forum.  You will need to create a Trello account, follow the instructions to link it to the 
+              server and finally send up the citizen.env file.  Then all you need to do is create your volunteer projects and tasks in Trello 
+              and upload the client file to your website and link to it.
+            </li>
+            <li>
+              You can install the CityZen server on your own hosting account.  We provide an <a href="npm-install.html">npm</a>, 
+              <a href="GitHub-install.html">GitHub</a> and <a href="Docker-install.html">Docker</a> install instructions.
+            </li>
+            </ol>
+        </p>
+        <p> 
+          Starting the CityZen server:
+        </p>
+        <p>
+          <ol>
+            <li>
+              Rename the cityzen.env file to .env and place it in the server root directory.
+            </li>
+            <li>
+              Initialize the .env file and start the server:
+              <p class="bg-dark text-white w-50"><strong>npm start -- --config config/trello.json</strong></p>
+
+              If the server started successfully it will read:
+
+              <p class="bg-dark text-white w-50"><strong>Listening on port 3000</strong></p>
+            </li>
+        </ol>
+
+
+
+
+        </p>
 
       </div>
 
