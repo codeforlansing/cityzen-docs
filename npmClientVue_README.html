@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CityZen volunteer software documentation">
+    <meta name="author" content="Rick Mason">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Cityzen Client documentation</title>
+  </head>
+
+  <body style="padding-left: 20px;">
+
+    <div >
+        <h1>CityZen Vue Client</h1>
+
+        <p>
+            This project is the frontend component for the Cityzen volunteer sign-up project. We've built CityZen for The Fledge. The Fledge 
+            describes itself as “a one-of-a-kind radically inclusive Ideation Space, Maker Space, Incubator and Accelerator on a mission to 
+            create opportunities to pursue happiness.” They work with two types of volunteers, people who are active in one of their projects 
+            and parolees fulfilling a community service commitment mandated by the court.
+        </p>
+        <p>
+            CityZen allows people to volunteer for both a project and tasks on the group's website. The Fledge staff setup a project in Trello 
+            and list the tasks required. They can drag or drop the project cards in the order they want them to appear on their website.
+        </p>
+        <p>
+            Volunteers then click on a project task(s) and enter their email. The group receives an email and schedules an appointment for the 
+            volunteer. If it's a new volunteer and the group is using either HubSpot or MailChimp their contact information will be added.
+        </p>
+        <p>
+            CityZen consists of three parts: <a href="https://www.npmjs.com/package/@codeforlansing/cityzen-server" target="_blank">the Server</a>, 
+            the Client and a <a href="https://trello.com/" target="_blank">Trello</a> account.  The Trello account is used to create volunteer 
+            projects and their tasks. If you don’t want to install the client there is a CDN driven page you can put on your website and then 
+            just simply link to it.  
+        </p>
+
+        <h2>Installing the client</h2>
+
+        <p>
+            First you want to setup the CityZen Server and also create a Trello account.  For help linking the Trello account to the server 
+            visit the <a href="https://codeforlansing.github.io/cityzen-docs/Link-Trello.html" target="_blank">CityZen docs</a>.  It will walk you 
+            through getting the required information from Trello and create an env file for the CityZen server.
+        </p>
+        <p>
+            Once you have the server running and linked to Trello you can install the client on your web server.  The client will install to 
+            port 8080.  There are two ways to install the client:
+        </p>
+        <p>First way is to simply download the client and associated files.  Two files are required <a href="./client-sample/client.html" target="_blank" download>Client.html</a> 
+           and <a href="./client-sample/sample-volunteer-tasks.css" target="_blank" download>sample-volunteer-tasks.css</a>   
+        </p>
+        <p>Second way is to build the web page yourself and be sure to link to three CDN files in your pages head statement:
+
+            <ul>
+                <li><a href="https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js" target="_blank">https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js</a></li><br/>
+
+                <li><a href="https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js.map" target="_blank">https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js.map</a></li><br/>
+
+                <li><a href="https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/css/volunteer-tasks.css" target="_blank">https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/css/volunteer-tasks.css</a></li>
+            </ul>
+
+        </p>
+        
+
+        <h2>Questions</h2>
+
+        <p>
+            For general support, direct your questions to the code4lansing channel in the <a href="https://lansingcodes-slackin.herokuapp.com/" target="_blank">
+            Lansing Codes Slack team</a>. The issue list for this project is exclusively for bug reports and feature requests.
+        </p>
+
+        <h2>Stay in Touch</h2>
+
+        <p>
+            <ul>
+               <li> <a href="https://lansingcodes-slackin.herokuapp.com/" target="_blank"> Slack</a> (join the code4lansing channel) </li>
+               <li> <a href="https://www.facebook.com/code4lansing" target="_blank">Facebook</a> </li>
+               <li> <a href="https://codeforlansing.org/" target="_blank">Website</a> </li>
+            </ul>
+        </p>
+
+        <h2>Contribution</h2>
+
+        <p>
+            You are welcome and encouraged to make changes to this website by submitting pull requests or forking our code to make your own 
+            community website!  Before you get ahead of yourself though, please read our <a href="https://github.com/codeforlansing/cityzen-client-vue/blob/master/.github/CONTRIBUTING.md" target="_blank">Contributing Guide</a>.
+        </p>
+
+        <h2>License</h2>
+
+        <p>
+            <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>
+        </p>
+
+        <p>
+
+            Copyright (c) 2019-present, Code for Lansing
+
+        </p>
+
+        <h2>Keywords</h2>
+
+        <p>Volunteer, Code For America</p>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+  </body>
+
+  </html>
