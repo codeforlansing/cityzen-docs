@@ -132,7 +132,7 @@
         <a href="https://www.npmjs.com/get-npm" target="_blank">Get NPM</a> <br/>
         For reference when these docs were written we were using version 12.18.1 of Node.js and version 6.14.5 of npm</p>
         <p></p>
-        <h4>Install using NPM</h4>
+        <h4>Installing the CityZen Server</h4>
         <p>
           The CityZen-Server project page on npm: <a href="https://www.npmjs.com/package/@codeforlansing/cityzen-server" target="_blank">CityZen-Server</a>
 
@@ -151,13 +151,37 @@
           <p>Or alternately you can install using npx:</p>
           <p class="bg-dark text-white w-50"><strong>npx @codeforlansing/cityzen-server</strong></p>
 
-          <p>The CityZen-Client project page on npm: <a href="#">CityZen-Client</a></p>
+        </p>
 
-          <p class="bg-dark text-white w-50"><strong>To be continued</strong></p>
+        <h4>Installing the CityZen client</h4>
 
-          <p><strong>TIP</strong> If you need a local development web server CityZen recommends <a href="https://www.npmjs.com/package/http-server">http-server</a></p>
+        <p>The CityZen-Client project page on npm: <a href="https://www.npmjs.com/package/@codeforlansing/cityzen-client-vue" target="_blank">CityZen-Client</a></p>
+
+        <p>
+            Once you have setup the CityZen Server you also need to create a Trello account.  For help linking the Trello account to the server 
+            visit the <a href="https://codeforlansing.github.io/cityzen-docs/Link-Trello.html" target="_blank">CityZen docs</a>.  It will walk you 
+            through getting the required information from Trello and create an env file for the CityZen server.
+        </p>
+        <p>
+            Once you have the server running and linked to Trello you can install the client on your web server.  The client will install to 
+            port 8080.  There are two ways to install the client:
+        </p>
+        <p>First way is to simply download the client and associated files.  Two files are required <a href="./client-sample/client.html" target="_blank" download>Client.html</a> 
+           and <a href="./client-sample/sample-volunteer-tasks.css" target="_blank" download>sample-volunteer-tasks.css</a>   
+        </p>
+        <p>Second way is to build the web page yourself and be sure to link to three CDN files in your pages head statement:
+
+            <ul>
+                <li><a href="https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js" target="_blank">https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js</a></li><br/>
+
+                <li><a href="https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js.map" target="_blank">https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/js/volunteer-tasks.js.map</a></li><br/>
+
+                <li><a href="https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/css/volunteer-tasks.css" target="_blank">https://cdn.jsdelivr.net/npm/@codeforlansing/cityzen-client-vue@latest/dist/css/volunteer-tasks.css</a></li>
+            </ul>
 
         </p>
+
+        <p><strong>TIP</strong> If you need a local development web server CityZen recommends <a href="https://www.npmjs.com/package/http-server">http-server</a></p>
 
         <div class="col-md-5 text-justify float-right">
             <a class="nav-link" href="GitHub-install.html">GitHub Install
